@@ -1,7 +1,13 @@
 <template>
         <lightning-card  title="PD1 Calculator">
             <!-- Input information-->
-            <lightning-button variant="brand" label="Calculate" title="Calculate" slot="actions"></lightning-button>
+            <lightning-button
+                variant="brand"
+                label="Calculate"
+                title="Calculate"
+                slot="actions"
+                onclick={calculateScore}
+            ></lightning-button>
             <!-- Input information-->
             <div class="slds-var-p-horizontal_small">
                 <lightning-input
