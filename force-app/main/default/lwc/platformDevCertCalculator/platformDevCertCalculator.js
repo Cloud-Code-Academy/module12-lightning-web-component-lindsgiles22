@@ -18,6 +18,14 @@ export default class PlatformDevCertCalculator extends LightningElement {
         console.log(event.target.type);
         console.log(event.target.label);
         const inputName = event.target.name;
-        this.devFundamentalScore = event.target.value;
-    }
+        if (inputName === 'processAuto') {
+            this.processAutomationScore = event.target.value;
+        } else if (inputName === 'devFundamentals') {
+            this.devFundamentalScore = event.target.value;
+        } else if (inputName === 'userInterface') {
+            this.userInterfaceScore = event.target.value;
+        } else if (inputName === 'testDebugDeploy') {
+            this.testingScore = event.target.value;
+        }
+}
 }
