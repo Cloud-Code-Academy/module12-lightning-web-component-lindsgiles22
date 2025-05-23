@@ -1,3 +1,4 @@
+import SerialNumber from '@salesforce/schema/Asset.SerialNumber';
 import { LightningElement } from 'lwc';
 
 export default class PlatformDevCertCalculator extends LightningElement {
@@ -18,14 +19,15 @@ export default class PlatformDevCertCalculator extends LightningElement {
         console.log(event.target.type);
         console.log(event.target.label);
         const inputName = event.target.name;
+        let value = Number(event.target.value);
         if (inputName === 'processAuto') {
-            this.processAutomationScore = event.target.value;
+            this.processAutomationScore = value;
         } else if (inputName === 'devFundamentals') {
-            this.devFundamentalScore = event.target.value;
+            this.devFundamentalScore = value;
         } else if (inputName === 'userInterface') {
-            this.userInterfaceScore = event.target.value;
+            this.userInterfaceScore = value;
         } else if (inputName === 'testDebugDeploy') {
-            this.testingScore = event.target.value;
+            this.testingScore = value;
         }
 }
 }
