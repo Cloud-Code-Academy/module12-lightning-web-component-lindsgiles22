@@ -12,4 +12,9 @@ export default class PlatformDevCertCalculator extends LightningElement {
     calculateScore() {
         this.certificationScore = this.devFundamentalScore + this.processAutomationScore + this.userInterfaceScore + this.testingScore;
     }
+
+    handleChange(event) {
+        console.log(event);
+        console.log(event.target);
+    }
 }

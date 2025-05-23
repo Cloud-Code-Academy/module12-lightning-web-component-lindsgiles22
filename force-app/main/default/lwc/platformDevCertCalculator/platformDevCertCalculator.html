@@ -15,24 +15,28 @@
                     name="devFundamentals"
                     label="Developer Fundamentals: 23%"
                     value={devFundamentalScore}
+                    onchange={handleChange}
                 ></lightning-input>
                 <lightning-input
                     type="number"
                     name="processAuto"
                     label="Process Automation: 30%"
                     value={processAutomationScore}
+                    onchange={handleChange}
                 ></lightning-input>
                 <lightning-input
                     type="number"
                     name="userInterface"
                     label="User Interface: 25%"
                     value={userInterfaceScore}
+                    onchange={handleChange}
                 ></lightning-input>
                 <lightning-input
                     type="number"
                     name="testDebugDeploy"
                     label="Testing, Debugging, and Deployment: 22%"
                     value={testingScore}
+                    onchange={handleChange}
                 ></lightning-input>
             </div>
             <!-- Display Results-->
