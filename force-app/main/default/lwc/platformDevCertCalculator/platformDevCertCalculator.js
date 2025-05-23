@@ -1,5 +1,9 @@
 import SerialNumber from '@salesforce/schema/Asset.SerialNumber';
 import { LightningElement } from 'lwc';
+    const devFundWeight = 0.23;
+    const processAutoWeight = 0.30;
+    const userIntWeight = 0.25;
+    const testDebugWeight = 0.22;
 
 export default class PlatformDevCertCalculator extends LightningElement {
     
@@ -11,10 +15,10 @@ export default class PlatformDevCertCalculator extends LightningElement {
     certificationScore = 90;
 
     calculateScore() {
-        let devFundWeight = this.devFundamentalScore * 0.23;
-        let processAutoWeight = this.processAutomationScore * 0.30;
-        let userIntWeight = this.userInterfaceScore * 0.25;
-        let testDebugWeight = this.testingScore * 0.22;
+        let devFundWeight = this.devFundamentalScore * devFundWeight;
+        let processAutoWeight = this.processAutomationScore * processAutoWeight;
+        let userIntWeight = this.userInterfaceScore * userIntWeight;
+        let testDebugWeight = this.testingScore * testDebugWeight;
         this.certificationScore = devFundWeight + processAutoWeight + userIntWeight + testDebugWeight;
     }
 
