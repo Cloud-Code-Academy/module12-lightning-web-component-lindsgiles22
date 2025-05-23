@@ -1,19 +1,15 @@
 <template>
     <!-- Process-->
      <div>
-        <button type="'button">Calculate</button>
+        <button type="button">Calculate</button>
      </div>
      <div>
-        <label for="devFundamentals">Developer Fundmentals: 23%</label>
-        <input type="number" id="devFundamentals" name="devFundamentals">
-        <label for="processAuto">Process Automation: 30%</label>
-        <input type="number" id="processAuto" name="processAuto">
-        <label for="userInterface">User Interface: 25%</label>
-        <input type="number" id="userInterface" name="userInterface">
-        <label for="testDebugDeploy">Testing, Debugging, and Deployment: 22%</label>
-        <input type="number" id="testDebugDeploy" name="testDebugDeploy">
+        <lightning-input type="number" name="devFundamentals" label="Developer Fundmentals: 23%" ></lightning-input>
+        <lightning-input type="number" name="processAuto" label="Process Automation: 30%" ></lightning-input>
+        <lightning-input type="number" name="userInterface" label="User Interface: 25%" ></lightning-input>
+        <lightning-input type="number" name="testDebugDeploy" label="Testing, Debugging, and Deployment: 22%" ></lightning-input>
      </div>
-    <!-- Dsiplay Results-->
+    <!-- Display Results-->
     <div>
         <p>Certification Score: <span>50%</span></p>
     </div>
