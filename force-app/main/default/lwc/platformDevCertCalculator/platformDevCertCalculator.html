@@ -59,9 +59,12 @@
                         </li>
                     </ul>
                 </template>
-            <template lwc:else={showResources}>
-                <p> You are ready for your first developer job! </p>
-            </template>
-        </div>
-    </lightning-card>
+                <template lwc:elseif={showGoodJob}>
+                    <p> You are ready for your first developer job! </p>
+                </template>
+                <template lwc:else>
+                    <p>Press calculate to see your score.</p>
+                </template>
+            </div>
+        </lightning-card>
 </template>
