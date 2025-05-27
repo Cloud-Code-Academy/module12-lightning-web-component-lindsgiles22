@@ -6,6 +6,6 @@ export default class ScoreInformation extends LightningElement {
    @api attemptId;
 
    get numberOfQuestionsCorrect(){
-        return Math.floor(this.score / 100) * 68;
+        return Math.floor((this.score / 100) * 68);
    }
 }
