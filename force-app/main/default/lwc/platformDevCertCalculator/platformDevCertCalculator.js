@@ -1,4 +1,4 @@
-import { LightningElement } from 'lwc';
+import { LightningElement, track } from 'lwc';
 const devFundWeight = 0.23;
 const processAutoWeight = 0.30;
 const userIntWeight = 0.25;
@@ -16,7 +16,7 @@ export default class PlatformDevCertCalculator extends LightningElement {
 
     showResources = false;
 
-    attemptHistory = [
+    @track attemptHistory = [
         {Id: 1, Score:50},
         {Id: 2, Score:70},
         {Id: 3, Score:80},
@@ -58,7 +58,6 @@ export default class PlatformDevCertCalculator extends LightningElement {
     }   
 
     addAttemptHistory(Score){
-        console.log(randomId);
         const attempt =
             {
                 Id: this.attemptHistory.length + 1, Score
