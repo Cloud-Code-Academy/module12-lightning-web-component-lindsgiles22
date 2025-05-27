@@ -30,6 +30,7 @@ export default class PlatformDevCertCalculator extends LightningElement {
         this.certificationScore = devFundWeightScore + processAutoWeightScore + userIntWeightScore + testDebugWeightScore;
 
         this.showResourceIfFailed();
+        this.addAttemptHistory(this.certificationScore);
     }
 
     handleChange(event) {
@@ -47,13 +48,22 @@ export default class PlatformDevCertCalculator extends LightningElement {
         }
 }
 
-showResourceIfFailed(){
-    if (this.certificationScore < passingScore){
-        this.showResources = true;
-    } else {
-        this.showResources = false;
-    }
-    this.showGoodJob = !this.showResources;
-}
+    showResourceIfFailed(){
+        if (this.certificationScore < passingScore){
+            this.showResources = true;
+        } else {
+            this.showResources = false;
+        }
+        this.showGoodJob = !this.showResources;
+    }   
 
+    addAttemptHistory(score){
+        let randomId = Math.floor(Math.random() * 100);
+        console.log(randomId);
+        const attempt =
+            {
+                Id: randomId, Score:score
+            }
+        this.attemptHistory = [...this.attemptHistory, attempt];
+    }
 }
