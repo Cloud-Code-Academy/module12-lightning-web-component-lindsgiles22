@@ -43,6 +43,14 @@
             <div slot="footer">
                 <h1 class="slds-text-heading_large slds_text_title_caps resultText">Certification Results</h1>
                 <p class="slds-text-heading_medium">Certification Score: <span class="slds-text-color_destructive">{certificationScore}%</span></p>
+                <div>
+                    <h1 class ="slds-text-heading_large">Previous Attempt</h1>
+                    <ul>
+                        <li>Attempt:1, Score: 50%</li>
+                        <li>Attempt:2, Score: 50%</li>
+                        <li>Attempt:3, Score: 50%</li>
+                    </ul>
+                </div>
                 <template lwc:if={showResources}>
                     <ul class="slds-text-align_left slds-text-heading_small slds-var-p-top-medium slds-list_dotted slds-box">
                             <li class="resourceLi">
