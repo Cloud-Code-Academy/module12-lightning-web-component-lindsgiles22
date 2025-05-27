@@ -3,6 +3,7 @@ const devFundWeight = 0.23;
 const processAutoWeight = 0.30;
 const userIntWeight = 0.25;
 const testDebugWeight = 0.22;
+const passingScore = 68;
 
 export default class PlatformDevCertCalculator extends LightningElement {
     
@@ -41,7 +42,7 @@ export default class PlatformDevCertCalculator extends LightningElement {
 }
 
 showResourceIfFailed(){
-    if (this.certificationScore < 68){
+    if (this.certificationScore < passingScore){
         this.showResources = true;
     } else {
         this.showResources = false;
