@@ -15,7 +15,6 @@ export default class PlatformDevCertCalculator extends LightningElement {
     certificationScore = 90;
 
     showResources = false;
-    showGoodJob = false;
 
     attemptHistory = [
         {Id: 1, Score:50},
