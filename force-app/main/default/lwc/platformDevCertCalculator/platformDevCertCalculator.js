@@ -13,7 +13,7 @@ export default class PlatformDevCertCalculator extends LightningElement {
 
     certificationScore = 90;
 
-    showResources = true;
+    showResources = false;
 
     calculateScore() {
         let devFundWeightScore = this.devFundamentalScore * devFundWeight;
@@ -21,6 +21,8 @@ export default class PlatformDevCertCalculator extends LightningElement {
         let userIntWeightScore = this.userInterfaceScore * userIntWeight;
         let testDebugWeightScore = this.testingScore * testDebugWeight;
         this.certificationScore = devFundWeightScore + processAutoWeightScore + userIntWeightScore + testDebugWeightScore;
+
+        this.showResources = true;
     }
 
     handleChange(event) {
