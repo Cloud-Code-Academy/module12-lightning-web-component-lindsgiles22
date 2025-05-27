@@ -10,6 +10,6 @@ export default class ScoreInformation extends LightningElement {
         return Math.floor((this.score / 100) * this.numberOfQuestions);
    }
    get numberOfQuestionsIncorrect(){
-    return this.numberOfQuestions = this.numberOfQuestionsCorrect;
+    return this.numberOfQuestions - this.numberOfQuestionsCorrect;
    }
 }
