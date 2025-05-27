@@ -57,12 +57,11 @@ export default class PlatformDevCertCalculator extends LightningElement {
         this.showGoodJob = !this.showResources;
     }   
 
-    addAttemptHistory(score){
-        let randomId = Math.floor(Math.random() * 100);
+    addAttemptHistory(Score){
         console.log(randomId);
         const attempt =
             {
-                Id: randomId, Score:score
+                Id: this.attemptHistory.length + 1, Score
             }
         this.attemptHistory = [...this.attemptHistory, attempt];
     }
