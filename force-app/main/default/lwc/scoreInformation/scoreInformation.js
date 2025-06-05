@@ -14,8 +14,10 @@ export default class ScoreInformation extends LightningElement {
    }
 
    handleDeleteAttempt(){
-    console.log('handleDeleteAttempt');
-    const deleteEvent = new CustomEvent('deleteattemmpt', {})
+    console.log('handleDeleteAttempt', this.attemptId);
+    const deleteEvent = new CustomEvent('deleteattemmpt', {
+        detail: this.attemptId
+    })
     this.dispatchEvent(deleteEvent);
    }
 }
