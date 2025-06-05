@@ -65,4 +65,7 @@ export default class PlatformDevCertCalculator extends LightningElement {
             }
         this.attemptHistory = [...this.attemptHistory, attempt];
     }
+    deleteAttemptHandler(){
+        console.log('This is called fromm parent to handle delete');
+    }
 }
